@@ -24,10 +24,7 @@ Partiendo de los conocimientos de procesamiento y visión por computador, el pro
 
 En esta segunda fase, el objetivo principal consistía en procesar las regiones recortadas de matrículas almacenadas en `resultados_deteccion.csv` y extraer la secuencia correspondiente comparando dos tecnologías distintas:
 
-1. **OCR Tradicional**: Funciona mediante un flujo de procesamiento en dos fases independientes:
-
-Detección (CRAFT) 
-Reconocimiento (CRNN - ResNet + LSTM)
+1. **OCR Tradicional**: Funciona mediante un flujo de procesamiento en dos fases independientes: Detección (CRAFT) y Reconocimiento (CRNN - ResNet + LSTM)
 
 En nuestro caso se eligio EASYOCR
 
@@ -52,9 +49,9 @@ cabecera = [
 ]
 ```
 
-Cada OCR tiene un algortimo distinto en este caso:
 
 **EasyOCR**: Se evalúa la imagen recortada mediante `lector_easyocr.readtext()`, registrando el texto extraído y su nivel de confianza asignado.
+
 **Florence-2**: La imagen recortada se convierte a formato RGB (`PIL.Image`) y se procesa mediante el *Vision Transformer* utilizando el prompt especial `<OCR>`. Se genera la decodificación autorregresiva con `model.generate(..., num_beams=3)` y se mide el tiempo consumido en milisegundos.
 
 ##### 2. Creación de Datos reales
@@ -76,21 +73,22 @@ df_unicos.columns = [
 
 El mismo será creado utilizando los datos que ya se han obtenido en resultados_deteccion.csv pero en este caso dejando el numero de matricula vacio para rellenarlo posteriormente viendo el video. 
 
-Gracias a este formato nos he posible realizar una métricas de manera mucho mas sencilla al tener tanto el identificador del tracker como los frames en los que aparece y desparece la matrícula y por otro lado si hemos detectado un falso positivo.
+Gracias a este formato nos he posible realizar una métricas de manera mucho mas sencilla al tener tanto el identificador del tracker como los frames en los que aparece y desaparece la matrícula.
 
 ##### 3. Cálculo de Métricas
 
 Por ultimo, con la ayuda de gemini se han creado métricas para evaluar el rendimiento de los OCR. Las metricas que se analizan son:
 
 **Accuracy a nivel de fotograma (Frame-level)**: ![alt text](image.png)
+
 **Accuracy a nivel de vehículo (Vehicle-level)**: ![alt text](image-1.png)
+
 **Distancia de Levenshtein media**: Es un algoritmo matemático que mide la distancia de edición entre dos cadenas de texto. Indica cuántos cambios simples (insertar, borrar o sustituir un carácter) hacen falta para transformar la lectura del OCR en la matrícula real.
+
 **Tiempo medio de procesamiento (ms)**: El tiempo exacto que tarda cada motor en procesar un recorte de matrícula.
 
 
 Para una comparativa homogénea, todos los resultados predichos y reales se sometieron a una función de normalización
-
-
 
 Ejemplo práctico Levenshtein: Para pasar de 1770JIG (predicción) a 1770JYG (real), basta con sustituir la 'I' por la 'Y'. Distancia = 1
 
@@ -115,6 +113,10 @@ A continuación se resumen los resultados numéricos globales obtenidos tras pro
 | :--- | :---: | :---: | :---: | :---: |
 | **EasyOCR** | 28 | 1 | **3.57%** | 5.57 |
 | **Florence-2** | 28 | 4 | **14.29%** | **3.32** |
+
+##### Gráficas
+
+![alt text](comparativa_ocr_metricas.png)
 
 ---
 
