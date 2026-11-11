@@ -85,7 +85,7 @@ Por ultimo, con la ayuda de gemini se han creado métricas para evaluar el rendi
 
 **Accuracy a nivel de vehículo (Vehicle-level)**:
 
-![alt text](image-1.png)
+![alt text](ApartadoB/image-1.png)
 
 **Distancia de Levenshtein media**: Es un algoritmo matemático que mide la distancia de edición entre dos cadenas de texto. Indica cuántos cambios simples (insertar, borrar o sustituir un carácter) hacen falta para transformar la lectura del OCR en la matrícula real.
 
@@ -120,7 +120,7 @@ A continuación se resumen los resultados numéricos globales obtenidos tras pro
 
 ##### Gráficas
 
-![alt text](comparativa_ocr_metricas.png)
+![alt text](ApartadoB/comparativa_ocr_metricas.png)
 
 ---
 
@@ -170,3 +170,7 @@ Por un lado, el modelo VLM **Florence-2** supera de forma significativa a EasyOC
 Por otro, el **costo computacional** es inverso, EasyOCR destaca por su extrema velocidad en CPU (**41.92 ms por fotograma**), permitiendo su ejecución fluida en tiempo real. Por su parte, Florence-2 requiere aproximadamente **3.12 segundos por recorte en CPU**, lo que sugiere la necesidad de aceleración por GPU o un esquema de muestreo por fotogramas.
 
 Por último, la baja exactitud global a nivel de fotograma ($2.88\%$) se debe a factores del vídeo de origen: desenfoque por movimiento, bajas resoluciones en vehículos lejanos y variaciones bruscas de iluminación que dificultan la lectura exacta de los 7 caracteres en un único frame.
+
+**[👉 Haz clic aquí para ver el vídeo de demostración con OCR en vivo](https://drive.google.com/file/d/18xE46Sx48md9swRfizW-XkhBqPDpDdrl/view?usp=drive_link)**
+
+
