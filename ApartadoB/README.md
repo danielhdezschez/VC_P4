@@ -79,9 +79,13 @@ Gracias a este formato nos he posible realizar una métricas de manera mucho mas
 
 Por ultimo, con la ayuda de gemini se han creado métricas para evaluar el rendimiento de los OCR. Las metricas que se analizan son:
 
-**Accuracy a nivel de fotograma (Frame-level)**: ![alt text](image.png)
+**Accuracy a nivel de fotograma (Frame-level)**:
 
-**Accuracy a nivel de vehículo (Vehicle-level)**: ![alt text](image-1.png)
+![alt text](image.png)
+
+**Accuracy a nivel de vehículo (Vehicle-level)**:
+
+![alt text](image-1.png)
 
 **Distancia de Levenshtein media**: Es un algoritmo matemático que mide la distancia de edición entre dos cadenas de texto. Indica cuántos cambios simples (insertar, borrar o sustituir un carácter) hacen falta para transformar la lectura del OCR en la matrícula real.
 
