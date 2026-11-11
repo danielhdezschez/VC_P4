@@ -173,4 +173,18 @@ Por último, la baja exactitud global a nivel de fotograma ($2.88\%$) se debe a 
 
 **[👉 Haz clic aquí para ver el vídeo de demostración con OCR en vivo](https://drive.google.com/file/d/18xE46Sx48md9swRfizW-XkhBqPDpDdrl/view?usp=drive_link)**
 
+##### Especificaciones del PC
 
+Procesador	   4.00 GHz
+RAM instalada	16,0 GB (15,9 GB usable)
+Almacenamiento	1.82 TB HDD ST2000DM001-1ER164, 224 GB SSD KINGSTON SHSS37A240G
+Tarjeta gráfica	NVIDIA GeForce GTX 1060 6GB (6 GB), Intel(R) HD Graphics 530 (128 MB)
+Identificador de dispositivo	A824CBEA-E6A2-42EA-9DB4-D26A8643D2C2
+Id. del producto	00329-00000-00003-AA269
+Tipo de sistema	Sistema operativo de 64 bits, procesador basado en x64
+Lápiz y entrada táctil	La entrada táctil o manuscrita no está disponible para esta pantalla
+
+* **Procesador (CPU):** [Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz]
+* **Memoria RAM:** [16 GB]
+* **Sistema Operativo:** [Windows 10 Enterprise de 64 bits]
+* **Entorno de ejecución:** 100% CPU (sin uso de CUDA/GPU).
