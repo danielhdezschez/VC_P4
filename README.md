@@ -81,7 +81,7 @@ Por ultimo, con la ayuda de gemini se han creado métricas para evaluar el rendi
 
 **Accuracy a nivel de fotograma (Frame-level)**:
 
-![alt text](image.png)
+![alt text](ApartadoB/image.png)
 
 **Accuracy a nivel de vehículo (Vehicle-level)**:
 
