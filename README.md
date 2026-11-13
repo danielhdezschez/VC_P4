@@ -2,6 +2,7 @@
 
 ### Jaime Cuenca Relinque y Daniel Hernández Sánchez
 
+Debido a las limitaciones de tamaño de almacenamiento estándar de GitHub (25 MB por archivo en subida directa y 100 MB mediante Git), todos los recursos de gran volumen generados durante el desarrollo de la práctica se encuentran alojados y disponibles para su descarga directa en la sección de Releases del repositorio [https://github.com/jaimecuenca2004/VC_P4/releases]
 #### **Objetivo del informe**
 
 Esta práctica se compone de dos tareas diferenciadas: la detección de objetos y el posterior reconocimiento óptico de caracteres (OCR). Ambas partes del trabajo se entregarán de forma conjunta en el repositorio principal de GitHub para su evaluación.
