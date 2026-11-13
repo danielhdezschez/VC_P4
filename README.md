@@ -164,7 +164,7 @@ A continuación se detalla cómo afrontamos y qué resultados obtuvimos en cada 
 
 **Eficiencia Computacional y Latencia:** La diferencia en el tiempo de inferencia es determinante. YOLO procesa cada ROI en un promedio de 69.79 ms, resultando 11.66 veces más rápido que RT-DETR, el cual requiere 813.61 ms. En la ejecución completa de la prueba, RT-DETR consumió aproximadamente el 86% del tiempo total de cómputo.
 
-**Capacidad de Detección:** En términos de sensibilidad (recall), ambos modelos ofrecen un rendimiento prácticamente idéntico. RT-DETR logra identificar únicamente una matrícula adicional respecto a YOLO (29 frente a 28, lo que supone una diferencia marginal del 3.57%).
+**Capacidad de Detección:** En términos de sensibilidad (recall), ambos modelos ofrecen un rendimiento prácticamente idéntico. RT-DETR logra identificar únicamente una matrícula adicional respecto a YOLO (29 frente a 28, lo que supone una diferencia marginal del 3.57%).Además RTDER  produce menos parpadeo en el seguimiento de las matrículas
 
 <p align="center">
   <img width="750" alt="foto resultado yolo" src="https://github.com/user-attachments/assets/df6d85e8-103d-4ff0-8107-7b2057cab246" />
